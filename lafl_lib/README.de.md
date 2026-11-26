@@ -5,9 +5,9 @@ Eine Bridge für ESX / QBCore / Qbox / Standalone, modernes Notify, Fortschritts
 
 **🇬🇧 [English guide → README.md](README.md)**
 
-![Notify, Fortschrittsbalken und Text-UI](docs/notify-progress-textui.png)
+![Notify, Fortschrittsbalken und Text-UI](docs/notify-progress-textui-de.png)
 
-![Minispiele](docs/minigames.png)
+![Minispiele](docs/minigames-de.png)
 
 ## Funktionen
 

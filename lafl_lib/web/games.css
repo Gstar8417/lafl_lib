@@ -1,0 +1,134 @@
+/* =====================================================================
+   lafl_lib minigames
+   ===================================================================== */
+
+/* ---------- skill check ---------- */
+.sc { display: block; }
+.sc-track { fill: none; stroke: var(--panel-3); stroke-width: 14; }
+.sc-zone { fill: none; stroke: var(--accent); stroke-width: 14; filter: drop-shadow(0 0 6px var(--accent)); transition: stroke .15s; }
+.sc-zone.hit { stroke: var(--green); }
+.sc-zone.miss { stroke: var(--red); }
+.sc-needle rect { fill: #fff; filter: drop-shadow(0 0 5px #fff); }
+.sc-wrap { position: relative; }
+.sc-key { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); min-width: 58px; height: 58px; font-size: 30px; border-radius: 12px; }
+
+/* ---------- lockpick ---------- */
+.lp { display: block; overflow: visible; }
+.lp-body { fill: var(--panel-2); stroke: var(--line); stroke-width: 2; }
+.lp-cyl-c { fill: var(--panel-3); stroke: #3a3a30; stroke-width: 3; }
+.lp-hole { fill: #0c0c09; }
+.lp-notch { fill: var(--accent); opacity: .7; }
+.lp-wrench { fill: #8b9486; }
+.lp-pick rect { fill: #cfd5c8; }
+.lp-pick .lp-handle { fill: var(--accent); }
+.lp-pin { fill: var(--panel-3); stroke: var(--line); stroke-width: 2; transition: all .2s; }
+.lp-pin.open { fill: var(--accent); stroke: var(--accent); filter: drop-shadow(0 0 6px var(--accent)); }
+
+/* ---------- hack + thermite ---------- */
+.hk-head { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+.hk-mode { font: 700 15px var(--cond); letter-spacing: 1.6px; text-transform: uppercase; color: var(--amber); }
+.hk-mode.input { color: var(--accent); }
+.hk-count { font: 700 15px var(--cond); color: var(--muted); font-variant-numeric: tabular-nums; }
+.hk-show { width: 100%; height: 3px; margin-top: -8px; border-radius: 3px; background: var(--panel-3); overflow: hidden; }
+.hk-show i { display: block; height: 100%; background: var(--amber); transform-origin: left; }
+
+.hk-grid { display: grid; gap: 8px; }
+.hk-cell { width: 58px; height: 58px; border-radius: 10px; background: var(--panel-2); border: 1px solid var(--line); font: 700 26px var(--cond); color: var(--text); transition: background .12s, border-color .12s, transform .08s; }
+.hk-cell:hover { border-color: var(--accent); }
+.hk-cell:active { transform: scale(.95); }
+.hk-cell.num.shown { background: var(--panel-3); border-color: var(--amber); color: var(--amber); box-shadow: 0 0 14px -4px var(--amber); }
+.hk-cell.ok { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.hk-cell.bad { background: rgba(239,91,76,.15); border-color: var(--red); color: var(--red); }
+
+.th-grid { display: grid; gap: 6px; }
+.th-cell { width: 48px; height: 48px; border-radius: 8px; background: var(--panel-2); border: 1px solid var(--line); transition: background .15s, box-shadow .15s, transform .08s; }
+.th-cell:hover { border-color: var(--accent); }
+.th-cell:active { transform: scale(.94); }
+.th-cell.lit { background: var(--amber); border-color: var(--amber); box-shadow: 0 0 18px -2px var(--amber); }
+.th-cell.ok { background: linear-gradient(135deg, #f0a63a, #ef5b4c); border-color: #f0a63a; box-shadow: 0 0 14px -3px #f0a63a; }
+.th-cell.bad { background: rgba(239,91,76,.2); border-color: var(--red); }
+.th-cell.missed { border-color: var(--amber); border-style: dashed; }
+
+/* ---------- safe ---------- */
+.sf { display: flex; align-items: center; gap: 26px; }
+.sf-dial-wrap { position: relative; }
+.sf-pointer { position: absolute; left: 50%; top: -6px; margin-left: -9px; width: 0; height: 0; border-left: 9px solid transparent; border-right: 9px solid transparent; border-top: 14px solid var(--accent); filter: drop-shadow(0 0 6px var(--accent)); z-index: 2; }
+.sf-ring { fill: var(--panel-2); stroke: var(--line); stroke-width: 2; }
+.sf-tick { stroke: #4a4a3f; stroke-width: 1.4; }
+.sf-tick.long { stroke: #8b9486; stroke-width: 2; }
+.sf-num { fill: var(--muted); font: 700 13px var(--cond); text-anchor: middle; }
+.sf-knob { fill: var(--panel-3); stroke: #3a3a30; stroke-width: 3; }
+.sf-grip { fill: #4a4a3f; }
+.sf-cap { fill: var(--bg); stroke: var(--line); stroke-width: 2; }
+.sf-side { display: flex; flex-direction: column; gap: 10px; width: 150px; }
+.sf-bars { display: flex; align-items: flex-end; gap: 5px; height: 64px; }
+.sf-bars i { width: 16px; border-radius: 4px; background: var(--panel-3); transition: background .08s; }
+.sf-bars i.on { background: var(--amber); box-shadow: 0 0 8px -2px var(--amber); }
+.sf-bars i.hit { background: var(--green); box-shadow: 0 0 10px -1px var(--green); }
+.sf-value { font: 700 46px var(--cond); line-height: 1; font-variant-numeric: tabular-nums; }
+.sf-value.hit { color: var(--green); text-shadow: 0 0 16px rgba(95,211,141,.5); }
+.sf-slots { display: flex; gap: 6px; flex-wrap: wrap; }
+.sf-dir { font: 700 13px var(--cond); letter-spacing: .8px; text-transform: uppercase; color: var(--accent); min-height: 17px; }
+.sf-dir.bad { color: var(--red); }
+.sf-dial-wrap.click svg { animation: sf-click .16s ease-out; }
+@keyframes sf-click { 30% { transform: translateX(2px) rotate(.6deg); } 65% { transform: translateX(-1.5px); } }
+.sf-slot { min-width: 34px; padding: 5px 6px; text-align: center; border-radius: 7px; background: var(--panel-2); border: 1px solid var(--line); font: 700 16px var(--cond); color: var(--muted); }
+.sf-slot.cur { border-color: var(--accent); color: var(--text); }
+.sf-slot.set { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+
+/* ---------- drill ---------- */
+.dr { gap: 16px; }
+.dr-plate { position: relative; width: 100%; height: 86px; border-radius: 12px; background: linear-gradient(180deg, #2b2b24, #1d1d18); border: 1px solid var(--line); padding: 14px 18px; cursor: pointer; }
+.dr-layers { display: flex; gap: 6px; height: 100%; }
+.dr-layer { flex: 1; position: relative; border-radius: 6px; background: repeating-linear-gradient(135deg, #34342c 0 6px, #2e2e27 6px 12px); border: 1px solid #3c3c33; overflow: hidden; }
+.dr-layer i { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: linear-gradient(90deg, #111, #1a1a15); }
+.dr-layer.done { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.dr-layer.done i { width: 100% !important; }
+.dr-bit { position: absolute; top: 50%; left: 0; width: 0; height: 0; margin-left: 18px; }
+.dr-bit::before { content: ''; position: absolute; right: 0; top: -9px; width: 42px; height: 18px; background: linear-gradient(90deg, #6b6b60, #c9cfc2); clip-path: polygon(0 0, 75% 0, 100% 50%, 75% 100%, 0 100%); }
+.dr-plate.drilling .dr-bit::before { animation: dr-vibe .06s linear infinite; }
+.dr-plate.hot .dr-bit::before { background: linear-gradient(90deg, #6b6b60, #ef5b4c); }
+.dr-sparks { position: absolute; right: -4px; top: -3px; width: 6px; height: 6px; border-radius: 50%; opacity: 0; }
+.dr-plate.drilling .dr-sparks { opacity: 1; background: #f0a63a; box-shadow: 4px -6px 0 -1px #f0a63a, -3px 7px 0 -1px #ffd27a, 7px 4px 0 -2px #fff, -6px -5px 0 -2px #ffd27a; animation: dr-spark .12s steps(2) infinite; }
+.dr-heat i { transition: background .2s; }
+.needle.bad { background: var(--red); box-shadow: 0 0 8px var(--red); }
+@keyframes dr-vibe { 0%,100% { transform: translateY(0); } 50% { transform: translateY(1px); } }
+@keyframes dr-spark { 50% { transform: rotate(40deg) scale(1.2); } }
+
+/* ---------- wires ---------- */
+.wr { display: block; }
+.wr-block { fill: var(--panel-2); stroke: var(--line); }
+.wr-wire { pointer-events: none; }
+.wr-shadow { fill: none; stroke: #000; stroke-opacity: .55; stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; }
+.wr-line { fill: none; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; transition: opacity .2s; }
+.wr-wire.cut .wr-line { stroke-dasharray: 6 10; opacity: .35; }
+.wr-wire.cut .wr-shadow { opacity: .2; }
+.wr-wire.was .wr-line { opacity: 1; stroke-width: 7; filter: drop-shadow(0 0 6px #fff); }
+.wr-cut { cursor: pointer; }
+.wr-cut rect { fill: var(--panel-3); stroke: var(--line); stroke-width: 1.5; transition: all .12s; }
+.wr-cut text { fill: var(--muted); font: 700 14px var(--sans); text-anchor: middle; pointer-events: none; }
+.wr-cut:hover rect { fill: var(--accent); stroke: var(--accent); }
+.wr-cut:hover text { fill: var(--accent-ink); }
+.wr-cut.done rect { fill: var(--red); stroke: var(--red); }
+.wr-term { stroke: var(--bg); stroke-width: 3; }
+.wr-term.end { fill: #8b9486; }
+.wr-label { fill: var(--muted); font: 700 18px var(--cond); text-anchor: middle; }
+.wr-label.target { fill: var(--amber); font-size: 20px; filter: drop-shadow(0 0 6px var(--amber)); }
+
+/* ---------- keypad ---------- */
+.kp { display: grid; grid-template-columns: 1fr 210px; gap: 18px; width: 100%; align-items: start; }
+.kp-left { display: flex; flex-direction: column; gap: 10px; min-height: 0; }
+.kp-display { display: flex; gap: 6px; padding: 10px; border-radius: 12px; background: #0c0c09; border: 1px solid var(--line); }
+.kp-display span { flex: 1; height: 50px; display: grid; place-items: center; border-radius: 8px; background: var(--panel); border: 1px solid var(--line); font: 700 30px var(--cond); color: var(--accent); }
+.kp-display span.cur { border-color: var(--accent); }
+.kp-history { max-height: 168px; display: flex; flex-direction: column; gap: 5px; }
+.kp-row { display: flex; gap: 5px; animation: pop .15s ease-out; }
+.kp-row span { flex: 1; height: 30px; display: grid; place-items: center; border-radius: 6px; font: 700 17px var(--cond); background: var(--panel-3); color: var(--muted); }
+.kp-row span.yes { background: rgba(95,211,141,.18); color: var(--green); box-shadow: inset 0 0 0 1px var(--green); }
+.kp-row span.near { background: rgba(240,166,58,.16); color: var(--amber); box-shadow: inset 0 0 0 1px var(--amber); }
+.kp-pad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+.kp-key { height: 52px; border-radius: 10px; background: var(--panel-2); border: 1px solid var(--line); border-bottom-width: 3px; font: 700 22px var(--cond); transition: all .08s; }
+.kp-key:hover { border-color: var(--accent); }
+.kp-key:active { transform: translateY(2px); border-bottom-width: 1px; }
+.kp-key.ok { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.kp-key.del { color: var(--muted); }

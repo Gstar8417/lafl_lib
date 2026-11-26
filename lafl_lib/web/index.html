@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>lafl_lib</title>
+    <link rel="stylesheet" href="lafl.css">
+    <link rel="stylesheet" href="overlay.css">
+    <link rel="stylesheet" href="games.css">
+</head>
+<body>
+    <div id="text3d"></div>
+    <div id="notify" class="center-right"></div>
+
+    <div id="textui" class="hidden center-left">
+        <div class="tu-key">E</div>
+        <span class="tu-ico hidden"></span>
+        <span class="tu-text"></span>
+    </div>
+
+    <div id="progress" class="hidden">
+        <div class="pg-row"><span class="pg-label"></span><span class="pg-pct">0%</span></div>
+        <div class="pg-bar"><i></i></div>
+        <div class="pg-hint"><span class="kbd">X</span><span></span></div>
+    </div>
+
+    <div id="minigame" class="hidden">
+        <div class="backdrop"></div>
+        <div class="mg" id="mg-window">
+            <div class="top">
+                <div class="logo" id="mg-logo">🔓</div>
+                <div>
+                    <div class="t1" id="mg-title"></div>
+                    <div class="t2" id="mg-sub"></div>
+                </div>
+                <div class="mg-stats" id="mg-stats"></div>
+            </div>
+            <div class="mg-timer" id="mg-timer"><i></i></div>
+            <div class="mg-body" id="mg-body"></div>
+            <div class="mg-foot">
+                <span id="mg-hint"></span>
+                <span class="esc"><span class="kbd">ESC</span><span id="mg-esc"></span></span>
+            </div>
+            <div class="mg-result hidden" id="mg-result"></div>
+        </div>
+    </div>
+
+    <script src="lafl.js"></script>
+    <script src="overlay.js"></script>
+    <script src="games/lockpick.js"></script>
+    <script src="games/skillcheck.js"></script>
+    <script src="games/hack.js"></script>
+    <script src="games/thermite.js"></script>
+    <script src="games/safe.js"></script>
+    <script src="games/drill.js"></script>
+    <script src="games/wires.js"></script>
+    <script src="games/keypad.js"></script>
+</body>
+</html>

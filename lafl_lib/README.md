@@ -258,4 +258,4 @@ options `difficulty = 'easy' | 'medium' | 'hard'`, `rounds`, `time`, `title`. Us
 **GNU LGPL-3.0** (see `LICENSE`; it builds on the GPL-3.0 in `COPYING`). Free to use in free and paid scripts. If you change lafl_lib itself and share it,
 your changes must stay open under the same license and keep the credits.
 
-Fonts: Barlow by Jeremy Tribby, [SIL Open Font License](web/fonts/OFL-Barlow.txt). Made by G-Star for LA for Life.
+Fonts: Barlow by Jeremy Tribby, [SIL Open Font License](web/fonts/OFL-Barlow.txt). Made by Gstar8417 for LA for Life.

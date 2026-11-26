@@ -3,7 +3,7 @@ game 'gta5'
 lua54 'yes'
 
 name 'esx_textui'
-author 'LAFL (G-Star)'
+author 'LAFL (Gstar8417)'
 description 'Replacement for esx_textui – ESX text UI in the LAFL design (lafl_lib)'
 version '1.0.0'
 

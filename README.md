@@ -97,4 +97,4 @@ Full API reference: **[guide → For developers](lafl_lib/README.md#for-develope
 **GNU LGPL-3.0** (`LICENSE`, based on the GPL-3.0 in `COPYING`).
 Use it for free in free **and** paid scripts. If you change lafl_lib itself and share it, your changes must stay open under the same license and keep the credits.
 
-Fonts: Barlow by Jeremy Tribby (SIL Open Font License). Made by **G-Star** for **LA for Life**.
+Fonts: Barlow by Jeremy Tribby (SIL Open Font License). Made by **Gstar8417** for **LA for Life**.

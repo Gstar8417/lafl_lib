@@ -211,4 +211,4 @@ Bei Belohnungen Minispiele immer über den Server starten: `LAFL.Minigame.Await(
 **GNU LGPL-3.0** (siehe `LICENSE`; sie baut auf der GPL-3.0 in `COPYING` auf). Nutzbar in kostenlosen und kostenpflichtigen Skripten. Wer lafl_lib selbst verändert und weitergibt,
 muss die Änderungen unter derselben Lizenz offenlegen und die Credits behalten.
 
-Schriften: Barlow von Jeremy Tribby, [SIL Open Font License](web/fonts/OFL-Barlow.txt). Gemacht von G-Star für LA for Life.
+Schriften: Barlow von Jeremy Tribby, [SIL Open Font License](web/fonts/OFL-Barlow.txt). Gemacht von Gstar8417 für LA for Life.

@@ -3,7 +3,7 @@ game 'gta5'
 lua54 'yes'
 
 name 'lafl_lib'
-author 'LAFL (G-Star)'
+author 'LAFL (Gstar8417)'
 description 'Shared library for all LAFL scripts: bridge (ESX / QB / standalone), money, database, security, notify, progress, text UI, dispatch and minigames'
 version '1.0.7'
 

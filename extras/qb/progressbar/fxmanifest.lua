@@ -3,7 +3,7 @@ game 'gta5'
 lua54 'yes'
 
 name 'progressbar'
-author 'LAFL (G-Star)'
+author 'LAFL (Gstar8417)'
 description 'Replacement for the QBCore progressbar – QBCore progress bar in the LAFL design (lafl_lib)'
 version '1.0.0'
 

@@ -3,7 +3,7 @@ game 'gta5'
 lua54 'yes'
 
 name 'esx_notify'
-author 'LAFL (G-Star)'
+author 'LAFL (Gstar8417)'
 description 'Replacement for esx_notify – ESX notifications in the LAFL design (lafl_lib)'
 version '1.0.0'
 

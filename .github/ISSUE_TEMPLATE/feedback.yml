@@ -1,0 +1,10 @@
+name: 💬 Feedback / idea
+description: Tell us what you like, what you miss or what could be better
+body:
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Your feedback
+      description: Anything goes – praise, ideas, wishes for new features or scripts.
+    validations:
+      required: true

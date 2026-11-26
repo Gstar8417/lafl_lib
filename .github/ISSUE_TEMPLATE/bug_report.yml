@@ -1,0 +1,45 @@
+name: 🐞 Problem / bug
+description: Something doesn't work as expected
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Only the description is required – everything else helps, but is optional.
+        Please check the **Troubleshooting** part of the [guide](https://github.com/Gstar8417/lafl_lib/blob/main/lafl_lib/README.md#troubleshooting) first.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, what happened instead?
+      placeholder: "e.g. On QBCore the garage still shows the old \"E\" hint after I added the DrawText lines."
+    validations:
+      required: true
+  - type: dropdown
+    id: framework
+    attributes:
+      label: Framework
+      options:
+        - ESX
+        - QBCore
+        - Qbox
+        - Standalone
+        - Not sure
+    validations:
+      required: false
+  - type: textarea
+    id: errors
+    attributes:
+      label: Errors (optional)
+      description: Red lines from the F8 console or the server console. Screenshots are fine too.
+      render: shell
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: lafl_lib version (optional)
+      description: Shown in the server console at start, or in `lafl_lib/fxmanifest.lua`.
+      placeholder: "1.0.7"
+    validations:
+      required: false
